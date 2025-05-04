@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hasan Ahmad
+
+A multilingual professional website for Hasan Ahmad, CEO of BlendLab, built with Next.js 15 and React 19.
+
+## Features
+
+- **Multilingual Support**: Fully supports English and Arabic with automatic content adaptation
+- **Responsive Design**: Optimized for all screen sizes with a clean, minimalist aesthetic
+- **Dark/Light Mode**: Theme switching with next-themes
+- **Modern Stack**: Built with Next.js 15, React 19, TypeScript, and Tailwind CSS v4
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.0.0 or later
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/hasanahmadsw/Mine.git
+cd Mine
+
+# Install dependencies
+npm install
+# or
+yarn install
+
+# Start the development server
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application will be available at [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+.
+├── app/                  # Next.js App Router structure
+│   ├── [lang]/           # Language-specific routes
+│   ├── api/              # API routes
+│   └── i18n/             # Internationalization configuration
+├── components/           # React components
+│   ├── sections/         # Page sections
+│   └── ui/               # UI components
+├── lib/                  # Utility functions and services
+├── public/               # Static assets
+└── styles/               # Global styles
+```
 
-## Learn More
+## Internationalization
 
-To learn more about Next.js, take a look at the following resources:
+The website supports both English and Arabic. Language files are located in `app/i18n/locales/`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To add a new language:
+1. Create a new file in the locales directory
+2. Add the language code to the supported locales in `app/i18n/settings.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This project is configured for deployment on Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+# or
+yarn build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+All rights reserved. This codebase is proprietary and confidential.
+
+## Contact
+
+Hasan Ahmad - CEO, BlendLab
+hasanahmad@blendlab.com

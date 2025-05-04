@@ -16,8 +16,8 @@
 # next.js
 /.next/
 /out/
-.cursor
-/.cursor
+.cursorrules
+/.cursorrules
 # production
 /build
 

@@ -35,11 +35,11 @@ export function Footer() {
             <Link href="#about" className="hover:text-primary transition-colors">
               {t('header.about')}
             </Link>
-            <Link href="#achievements" className="hover:text-primary transition-colors">
-              {t('header.achievements')}
+            <Link href="/thoughts" className="hover:text-primary transition-colors">
+              {t('header.thoughts')}
             </Link>
-            <Link href="#testimonials" className="hover:text-primary transition-colors">
-              {t('header.testimonials')}
+            <Link href="/philosophy" className="hover:text-primary transition-colors">
+              {t('header.philosophy')}
             </Link>
             <Link href="#contact" className="hover:text-primary transition-colors">
               {t('header.contact')}
@@ -47,19 +47,19 @@ export function Footer() {
           </nav>
           
           <div className="flex gap-3">
-            <Button size="icon" variant="ghost" className="rounded-full">
+            <Button size="icon" variant="ghost" className="rounded-full" onClick={() => window.open('https://www.linkedin.com/in/hasanaliahmad/', '_blank')}>
               <LinkedinIcon className="h-5 w-5" />
               <span className="sr-only">LinkedIn</span>
             </Button>
-            <Button size="icon" variant="ghost" className="rounded-full">
+            <Button size="icon" variant="ghost" className="rounded-full" onClick={() => window.open('https://x.com/hasanahmadsw', '_blank')}>
               <TwitterIcon className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Button>
-            <Button size="icon" variant="ghost" className="rounded-full">
+            <Button size="icon" variant="ghost" className="rounded-full" onClick={() => window.open('https://www.instagram.com/hasanahmadsw', '_blank')}>
               <InstagramIcon className="h-5 w-5" />
               <span className="sr-only">Instagram</span>
             </Button>
-            <Button size="icon" variant="ghost" className="rounded-full">
+            <Button size="icon" variant="ghost" className="rounded-full" onClick={() => window.open('https://github.com/hasanahmadsw', '_blank')}>
               <GithubIcon className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </Button>

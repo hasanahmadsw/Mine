@@ -82,7 +82,7 @@ export function Header() {
           <Link href="/philosophy" className="hover:text-primary transition-colors">
             {t('header.philosophy')}
           </Link>
-          <Link href="/contact" className="hover:text-primary transition-colors">
+          <Link href="#contact" className="hover:text-primary transition-colors">
             {t('header.contact')}
           </Link>
         </nav>
@@ -139,18 +139,18 @@ export function Header() {
             {t('header.about')}
           </Link>
           <Link 
-            href="#achievements" 
+            href="/thoughts" 
             className="py-2 hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            {t('header.achievements')}
+            {t('header.thoughts')}
           </Link>
           <Link 
-            href="#testimonials" 
+            href="/philosophy" 
             className="py-2 hover:text-primary transition-colors"
             onClick={() => setIsMenuOpen(false)}
           >
-            {t('header.testimonials')}
+            {t('header.philosophy')}
           </Link>
           <Link 
             href="#contact" 

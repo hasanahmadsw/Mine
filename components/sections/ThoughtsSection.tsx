@@ -1,5 +1,4 @@
-"use client";
-import { useTranslations } from "@/app/i18n/client";
+import { getTranslations } from "@/app/i18n/server";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Locale } from "@/app/i18n/settings";
@@ -13,16 +12,15 @@ type ArticleProps = {
   excerpt: string;
   date: string;
   lang: Locale;
+  t: any; // Translation object
 };
 
 interface ThoughtsSectionProps {
   featuredThoughts: ThoughtMeta[];
-  lang: Locale;
+  locale: Locale;
 }
 
-const Article = ({ id, slug, title, excerpt, date, lang }: ArticleProps) => {
-  const { t } = useTranslations();
-  
+const Article = ({ id, slug, title, excerpt, date, lang, t }: ArticleProps) => {
   // Format date
   const formatDate = (dateString: string) => {
     const options: Intl.DateTimeFormatOptions = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -41,7 +39,7 @@ const Article = ({ id, slug, title, excerpt, date, lang }: ArticleProps) => {
       <CardFooter className="p-4 pt-0">
         <Link href={`/${lang}/thoughts/${slug}`} className="w-full">
           <Button variant="outline" className="w-full group">
-            {t("thoughts.readMore")}
+            {t.thoughts?.readMore || 'Read More'}
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1">
               <path strokeLinecap="square" strokeLinejoin="miter" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
             </svg>
@@ -52,8 +50,8 @@ const Article = ({ id, slug, title, excerpt, date, lang }: ArticleProps) => {
   );
 };
 
-export function ThoughtsSection({ featuredThoughts, lang }: ThoughtsSectionProps) {
-  const { t } = useTranslations();
+export async function ThoughtsSection({ featuredThoughts, locale }: ThoughtsSectionProps) {
+  const t = await getTranslations(locale);
   
   // Convert ThoughtMeta[] to ArticleProps[]
   const articles: ArticleProps[] = featuredThoughts.map(thought => ({
@@ -62,19 +60,20 @@ export function ThoughtsSection({ featuredThoughts, lang }: ThoughtsSectionProps
     title: thought.title,
     excerpt: thought.excerpt,
     date: thought.date,
-    lang: lang
+    lang: locale,
+    t: t
   }));
 
   return (
     <section id="thoughts" className="py-20">
       <div className="container px-4">
         <div className="mb-12">
-          <h2 className="text-3xl font-bold mb-4">{t("thoughts.title")}</h2>
-          <p className="text-muted-foreground max-w-2xl">{t("thoughts.subtitle")}</p>
+          <h2 className="text-3xl font-bold mb-4">{t.thoughts?.title || 'Thoughts'}</h2>
+          <p className="text-muted-foreground max-w-2xl">{t.thoughts?.subtitle || 'Latest thoughts and insights'}</p>
         </div>
         
         <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-6">{t("thoughts.featured")}</h3>
+          <h3 className="text-xl font-semibold mb-6">{t.thoughts?.featured || 'Featured'}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {articles.map((article) => (
               <Article 
@@ -85,15 +84,16 @@ export function ThoughtsSection({ featuredThoughts, lang }: ThoughtsSectionProps
                 excerpt={article.excerpt}
                 date={article.date}
                 lang={article.lang}
+                t={article.t}
               />
             ))}
           </div>
         </div>
         
         <div className="mt-10">
-          <Link href={`/${lang}/thoughts`}>
+          <Link href={`/${locale}/thoughts`}>
             <Button className="group w-full" size="lg">
-              {t("thoughts.viewAll")}
+              {t.thoughts?.viewAll || 'View All'}
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1">
                 <path strokeLinecap="square" strokeLinejoin="miter" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
               </svg>

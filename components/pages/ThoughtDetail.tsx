@@ -196,7 +196,7 @@ export function ThoughtDetail({
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
             {/* Main Content */}
-            <div className="md:col-span-8 lg:col-span-9">
+            <div className="md:col-span-12 lg:col-span-12">
               <article >
                  <ReactMarkdown
                    remarkPlugins={[remarkGfm]}
@@ -303,45 +303,6 @@ export function ThoughtDetail({
                   )}
                 </div>
               )}
-            </div>
-            
-            {/* Sidebar */}
-            <div className="md:col-span-4 lg:col-span-3">
-              <div className="sticky top-8 space-y-8">
-                <div className="p-6 bg-muted/30 rounded-lg">
-                  <h3 className="text-lg font-bold mb-4">{t('thoughts.aboutAuthor')}</h3>
-                  <div className="flex items-center mb-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-xl font-medium text-primary">{thought.author.substring(0, 1)}</span>
-                    </div>
-                    <div className="ml-4">
-                      <h4 className="font-semibold">{thought.author}</h4>
-                      <p className="text-sm text-muted-foreground">CEO & Founder at BlendLab</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    {lang === 'en' 
-                      ? "Visionary entrepreneur and business strategist with a passion for innovation and transformative solutions."
-                      : "رائد أعمال صاحب رؤية واستراتيجي في مجال الأعمال مع شغف بالابتكار والحلول التحويلية."
-                    }
-                  </p>
-                </div>
-                
-                <div className="p-6 bg-primary text-primary-foreground rounded-lg">
-                  <h3 className="text-lg font-bold mb-4">{t('thoughts.newsletter.title')}</h3>
-                  <p className="text-sm mb-4 text-primary-foreground/80">{t('thoughts.newsletter.description')}</p>
-                  <form className="space-y-4">
-                    <input
-                      type="email"
-                      placeholder={t('thoughts.newsletter.placeholder')}
-                      className="w-full px-4 py-2 rounded-lg border border-primary-foreground/20 bg-transparent placeholder:text-primary-foreground/60 focus:outline-none focus:border-primary-foreground"
-                    />
-                    <Button className="w-full bg-white text-primary hover:bg-white/90">
-                      {t('thoughts.newsletter.button')}
-                    </Button>
-                  </form>
-                </div>
-              </div>
             </div>
           </div>
         </div>

@@ -54,11 +54,11 @@ export default async function Home({ params }: { params: Promise<{ lang: Locale 
     <>
       <Header />
       <main>
-        <HeroSection />
-        <AboutSection />
-        <ThoughtsSection featuredThoughts={featuredThoughts} lang={lang} />
-        <PhilosophySection />
-        <ContactSection />
+        <HeroSection locale={lang} />
+        <AboutSection locale={lang} />
+        <ThoughtsSection featuredThoughts={featuredThoughts} locale={lang} />
+        <PhilosophySection locale={lang} />
+        <ContactSection locale={lang} />
       </main>
       <Footer />
     </>

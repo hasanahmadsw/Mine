@@ -40,12 +40,13 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: Loc
     },
   };
 }
-export default function Philosophy() {
+export default async function Philosophy({ params }: { params: Promise<{ lang: Locale }> }) {
+  const { lang } = await params;
   return (
     <>
       <Header />
       <main>
-        <PhilosophyPage />
+        <PhilosophyPage locale={lang} />
       </main>
       <Footer />
     </>

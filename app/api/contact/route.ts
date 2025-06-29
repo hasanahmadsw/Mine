@@ -105,8 +105,8 @@ export async function POST(request: Request) {
           
           <p>If you have any immediate questions, you can reach us at:</p>
           <ul style="list-style: none; padding: 0;">
-            <li>📞 Phone: +966 59 996 69 96</li>
-            <li>📧 Email: hasanahmad@blendlab.net</li>
+            <li>📞 Phone: +971 50 883 8637</li>
+            <li>📧 Email: hsn@blendlab.ae</li>
           </ul>
           
           <p style="color: #6b7280; font-size: 0.875rem; margin-top: 40px;">

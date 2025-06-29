@@ -144,53 +144,6 @@
       }
     }
   },
-  "achievements": {
-    "title": "Achievements",
-    "subtitle": "BlendLab's growth and impact under Hasan Ahmad's leadership",
-    "metrics": {
-      "funding": {
-        "title": "Funding Raised",
-        "value": "$25M+",
-        "description": "Secured in venture capital"
-      },
-      "team": {
-        "title": "Team Growth",
-        "value": "150+",
-        "description": "Talented professionals"
-      },
-      "global": {
-        "title": "Global Presence",
-        "value": "12",
-        "description": "Countries with operations"
-      },
-      "satisfaction": {
-        "title": "Client Satisfaction",
-        "value": "98%",
-        "description": "Positive feedback score"
-      }
-    },
-    "milestones": {
-      "founding": {
-        "year": "2019",
-        "title": "BlendLab Founded",
-        "description": "Launched with a vision to transform the technology landscape with innovative solutions."
-      },
-      "funding": {
-        "year": "2021",
-        "title": "Series A Funding",
-        "description": "Secured $12M in Series A funding to accelerate product development and market expansion."
-      },
-      "expansion": {
-        "year": "2023",
-        "title": "Global Expansion",
-        "description": "Expanded operations to 12 countries with strategic partnerships across three continents."
-      }
-    }
-  },
-  "testimonials": {
-    "title": "What Others Say",
-    "subtitle": "Testimonials from clients and partners about working with Hasan and BlendLab"
-  },
   "thoughts": {
     "meta": {
       "title": "Thoughts | Hasan Ahmad",
@@ -271,29 +224,14 @@
           "title": "Sustainable Implementation",
           "description": "We focus on creating lasting impact through solutions that evolve with your business needs and technological advances."
         }
-      },
-      "values": {
-        "title": "Our Values in Action",
-        "testimonials": {
-          "client": {
-            "title": "Client Success Stories",
-            "quote": "BlendLab's approach to our digital transformation was refreshingly different. They didn't just implement technology; they helped us rethink our entire business model.",
-            "author": "Sarah Johnson",
-            "position": "CTO, Global Innovations"
-          },
-          "industry": {
-            "title": "Industry Recognition",
-            "quote": "Hasan Ahmad's leadership approach at BlendLab exemplifies how philosophical principles can create tangible business outcomes and drive innovation in the tech sector.",
-            "author": "Tech Innovators Magazine",
-            "position": "Annual Leadership Review"
-          }
-        }
       }
     },
     "cta": {
       "title": "Let's Build With Purpose",
       "description": "Discover how our philosophy can help your business reach new heights through innovative, purpose-driven solutions.",
-      "button": "Schedule a Consultation"
+      "button": "Schedule a Consultation",
+      "scheduleCall": "Schedule a Call",
+      "viewPortfolio": "View Our Portfolio"
     }
   },
   "contact": {
@@ -310,15 +248,15 @@
       "title": "Contact Information",
       "email": {
         "title": "Email",
-        "value": "hasanahmad@blendlab.net"
+        "value": "hsn@blendlab.ae"
       },
       "phone": {
         "title": "Phone",
-        "value": "+1 (555) 123-4567"
+        "value": "+971 50 883 8637"
       },
       "headquarters": {
         "title": "Headquarters",
-        "value": "123 Innovation Drive, Tech District, San Francisco, CA 94105"
+        "value": "United Arab Emirates"
       }
     },
     "benefits": {
@@ -341,7 +279,11 @@
         "email": "Your Email",
         "subject": "Message Subject",
         "message": "Your Message"
-      }
+      },
+      "button": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent!",
+      "successDescription": "Thank you for reaching out. We'll get back to you soon."
     },
     "cta": {
       "title": "Let's Build Something Great Together",
